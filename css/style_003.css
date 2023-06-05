@@ -1,0 +1,158 @@
+/* 유니코드설정 */
+@charset 'UTF-8';
+
+/* 전체설정 */
+
+ * {margin: 0;
+    padding: 0;}
+ ul , ol {list-style: none;}
+ a {text-decoration: none;
+    color: #000;}
+
+
+/* 가시속성설정 */
+.layout001 {border: 1px solid #000;
+            margin: 10px;
+        padding: 10px;}
+.layout001 li {border-bottom: 5px solid yellow;
+margin-bottom: 5px;
+background-image: linear-gradient(90deg, #ccc 50%, #000 0);
+background-size: 8px;
+background-repeat: no-repeat;
+padding-left: 10px;}
+
+
+.box001 {background-color: aquamarine;
+        padding: 40px;}
+.box001 span {border: 2px solid #000;
+            padding: 20px;}
+
+.box001 span:nth-child(1) {display: inline;}
+.box001 span:nth-child(2) {display: inline-block}
+.box001 span:nth-child(3) {display: block;}
+
+/* float 속성 */
+
+.layout002 {border: 1px solid #000;
+    margin: 10px;
+padding: 10px;}
+
+.box002 {background-color: aquamarine;
+    padding: 40px;}
+
+.box002:after {content: '';
+            display: block;
+            clear: both;
+        }
+
+.box002 li {border: 1px solid #000;
+        padding: 10px;
+        float: left;}
+
+ .box002 li:nth-child(5) {float: right;}       
+
+
+
+/* flex속성 */
+
+.box003 {background-color: aquamarine;
+    padding: 40px;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column-reverse;
+}
+
+.box003 li {border: 1px solid #000;
+    padding: 10px;}
+
+
+
+    /* position예제  */
+
+
+    .box004 {background-color: aqua;
+            display: flex;
+        height: 200px;
+    position: relative;}
+
+    .box004 p {width: 200px; 
+                height: 200px;
+                border: 1px solid #000;}
+
+    .box004 p:nth-child(1) {position: relative;}
+    .box004 p:nth-child(2) {position: absolute;
+    left: 200px;
+top:0}
+.box004 p:nth-child(3) {position: fixed;
+                    top: 0;
+                left: 0;
+            z-index: 99;}
+
+
+.box005 {background-color: aquamarine;
+        height: 500px;
+    margin-top: 20px;
+position: relative;}
+
+.box005 p:nth-child(1) {width: 200px;
+                        height: 200px;
+                        background-color: beige;
+                        position: absolute;
+                        right: 50%;
+                    margin-right: -100px;
+                bottom: 50%;
+                margin-bottom: -100px;}
+.box005 p:nth-child(2) {position: absolute;
+                    width: 200px;
+                    height: 200px;
+                    background-color: skyblue;
+                    right: 50px;
+                    bottom: 50px;}
+.box005 p:nth-child(2) span {position: absolute;
+    left: 50%;
+    top: 50%;}
+
+.box005 p:nth-child(3) { width: 200px;
+    height: 200px;
+    background-color: lightgoldenrodyellow;
+    position: fixed;
+bottom: 0;
+right: 0;}
+
+
+/* z-index 속성예제 */
+
+.box006 {width: 400px;
+        height: 400px;
+    background-color: aquamarine;
+    position: relative;}
+.box006 p:nth-child(1) {width: 200px;
+                    height: 200px;
+                    background-color: red;
+                    position: absolute;
+                    z-index: 4;
+             }
+
+.box006 p:nth-child(2) {width: 200px;
+                        height: 200px;
+                        background-color: yellow;
+                        position: absolute;
+                        left: 50px;
+                        top: 50px;
+                      }
+.box006 p:nth-child(3) {width: 200px;
+                            height: 200px;
+                            background-color: blue;
+                        position: absolute;
+                        left: 100px;
+                        top: 100px;
+                    z-index: -1;}
+
+                    /* -1은 부모자 뒤로 내려간다. */
+
+
+
+
+
+
+        body {height: 3000px;}
