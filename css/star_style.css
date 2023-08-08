@@ -49,6 +49,8 @@ justify-content: space-between;}
 /* 비주얼내부의 이미지이동 */
 .visual {position: relative;
 }
+
+.visual img {display: none;}
 .love {position: absolute;
     top:40%;
     left: 150px;}
